@@ -20,7 +20,7 @@ python trainer.py 			--dataset div2k \
 							--eval_datasets div2k set5 bsds100 urban100 \
 							--model scn \
 							--scale 2 \
-							--num_scales 3 \
+							--num_scales 2 \
 							--job_dir ./scn_x2
 
 # python main.py --model WDSR_b \
