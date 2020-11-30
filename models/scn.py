@@ -228,7 +228,7 @@ class Block(nn.Module):
     down_res_list = [res_list[0]] + [self.down(x) for x in res_list[:-1]]
     up_res_list = [self.up(x) for x in res_list[1:]] + [res_list[-1]]
 
-    for x, r, d, u in zip(x_list, res_list, down_res_list, up_res_list)
+    for x, r, d, u in zip(x_list, res_list, down_res_list, up_res_list):
       print("size of x in BODY is ", x.size())
       print("size of r in BODY is ", r.size())
       print("size of d in BODY is ", d.size())
