@@ -172,10 +172,11 @@ class Head(nn.Module):
 
   def forward(self, x):
     x_list = [x]
-    print("size of x in BODY is ", x.size())
+    print("size of x in HEAD is ", x.size())
     print("len of x_list in HEAD is ", len(x_list))
     for _ in range(self.num_scales - 1):
       x_list.append(self.down(x_list[-1]))
+      print("size of x in HEAD is ", x.size())
       print("len of x_list in HEAD is ", len(x_list))
     return x_list
 
@@ -229,15 +230,15 @@ class Block(nn.Module):
     up_res_list = [self.up(x) for x in res_list[1:]] + [res_list[-1]]
 
     for x, r, d, u in zip(x_list, res_list, down_res_list, up_res_list):
-      print("size of x in BODY is ", x.size())
-      print("size of r in BODY is ", r.size())
-      print("size of d in BODY is ", d.size())
-      print("size of u in BODY is ", u.size())
+      print("size of x in Block is ", x.size())
+      print("size of r in Block is ", r.size())
+      print("size of d in Block is ", d.size())
+      print("size of u in Block is ", u.size())
 
-    print("len of x_list in BODY is ", len(x_list))
-    print("len of res_list in BODY is ", len(res_list))
-    print("len of down_res_list in BODY is ", len(down_res_list))
-    print("len of up_res_list in BODY is ", len(up_res_list))
+    print("len of x_list in Block is ", len(x_list))
+    print("len of res_list in Block is ", len(res_list))
+    print("len of down_res_list in Block is ", len(down_res_list))
+    print("len of up_res_list in Block is ", len(up_res_list))
 
     x_list = [
         x + r + d + u
