@@ -16,7 +16,7 @@
 #python main.py --model EDSR --scale 3 --save edsr_x3 --n_resblocks 32 --n_feats 256 --res_scale 0.1 --reset --pre_train [pre-trained EDSR model dir]
 
 # EDSR in the paper (x4) - from EDSR (x2)
-python main.py trainer.py 	--dataset div2k \
+python trainer.py 			--dataset div2k \
 							--eval_datasets div2k set5 bsds100 urban100 \
 							--model scn \
 							--scale 2 \
