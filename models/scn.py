@@ -228,10 +228,11 @@ class Block(nn.Module):
     down_res_list = [res_list[0]] + [self.down(x) for x in res_list[:-1]]
     up_res_list = [self.up(x) for x in res_list[1:]] + [res_list[-1]]
 
-    print("size of x in BODY is ", x_list.size())
-    print("size of r in BODY is ", res_list.size())
-    print("size of d in BODY is ", down_res_list.size())
-    print("size of u in BODY is ", up_res_list.size())
+    for x, r, d, u in zip(x_list, res_list, down_res_list, up_res_list)
+      print("size of x in BODY is ", x.size())
+      print("size of r in BODY is ", r.size())
+      print("size of d in BODY is ", d.size())
+      print("size of u in BODY is ", u.size())
 
     print("len of x_list in BODY is ", len(x_list))
     print("len of res_list in BODY is ", len(res_list))
