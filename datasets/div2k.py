@@ -3,7 +3,7 @@ import os
 import common.modes
 import datasets._isr
 
-LOCAL_DIR = 'data/DIV2K/'
+LOCAL_DIR = './data/DIV2K/'
 TRAIN_LR_DIR = lambda s: LOCAL_DIR + 'DIV2K_train_LR_bicubic/X{}/'.format(s)
 TRAIN_HR_DIR = LOCAL_DIR + 'DIV2K_train_HR/'
 EVAL_LR_DIR = lambda s: LOCAL_DIR + 'DIV2K_valid_LR_bicubic/X{}/'.format(s)
