@@ -1,4 +1,4 @@
-# export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5
+export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 # EDSR baseline model (x2) + JPEG augmentation
 #python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset
 #python main.py --model EDSR --scale 2 --patch_size 96 --save edsr_baseline_x2 --reset --data_train DIV2K+DIV2K-Q75 --data_test DIV2K+DIV2K-Q75
