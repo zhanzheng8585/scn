@@ -172,8 +172,11 @@ class Head(nn.Module):
 
   def forward(self, x):
     x_list = [x]
+    print("size of x is ", x.size())
     for _ in range(self.num_scales - 1):
+      print("size of x is ", x.size())
       x_list.append(self.down(x_list[-1]))
+      print("size of x is ", x.size())
     return x_list
 
 
